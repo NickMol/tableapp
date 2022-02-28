@@ -1,0 +1,55 @@
+#test_wrapper{
+    width: 90% ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pageholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.titleholder,
+.linkholder{
+    display: flex;
+    margin-top: 10px;
+    width: 98%;
+    border-radius: 5px;
+}
+
+.titleholder{
+    background-color: #4267B2;
+    align-items: center;
+    height: 40px;
+}
+
+.linkholder{
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    justify-content: space-around;
+}
+
+.title{
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.linkbox{
+    display: flex;
+    width:20%;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+
+
+}

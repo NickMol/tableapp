@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'table/main.css'%}">
+    
+    <title> Table app</title>
+
+</head>
+
+<body>
+    <div class="pageholder">
+        <div class="titleholder"> 
+            <div class="title"><i class="fa-solid fa-table"></i> Welcome to our table application! </div>
+        </div>
+
+        <div class="linkholder">
+            <div class="linkbox"> 
+                <a href="{% url 'table1'%}"> Table 1 </a>
+            </div>
+
+            <div class="linkbox"> 
+                <a href="#"> Will follow later! </a>
+            </div>
+
+            <div class="linkbox"> 
+                <a href="#"> Will follow later! </a>
+            </div>
+
+        </div>
+    </div>
+  
+</body>
+</html>
