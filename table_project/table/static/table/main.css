@@ -2,7 +2,59 @@
     width: 90% ;
     margin-top: 30px;
     margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+div.dataTables_filter, div.dataTables_length {
+    padding: 10px;
+  }
+
+#test .odd td,
+#test .even td{
+    background-color: white !important;
+}
+
+table#test.display tbody tr:nth-child(even):hover td{
+    background-color: #ffa !important;
+    }
+    
+table#test.display tbody tr:nth-child(odd):hover td,
+table#test.display tbody tr:nth-child(even):hover td {
+background-color: rgb(224, 224, 222) !important;
+}
+
+#test{
+    border-collapse: collapse;
+    overflow: hidden;
+    margin:0px;
+    font-size: 0.9em;
+    border-radius: 7px 7px 0 0;
+}
+
+#test thead{
+    background-color: #4267B2;
+    color: white;
+  
+}
+
+#test th,
+#test td {
+  padding: 4px 3px;
+  text-align: left;
+}
+
+#test td{
+  font-size:14px;
+}
+
+#test tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#test tbody tr:last-of-type {
+  border-bottom: 2px solid #3d70b2;
+}
+
 
 .pageholder{
     display: flex;
