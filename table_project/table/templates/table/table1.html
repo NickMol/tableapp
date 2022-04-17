@@ -1,28 +1,8 @@
-{% load static %}
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="{% static 'table/main.css'%}">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-
-
-    <title> Table app</title>
-
-</head>
-
-<body>
+{% extends 'table/base.html' %}
+{% block content %}
     <div class="pageholder">
         <div class="titleholder"> 
-            <div class="title"><i class="fa-solid fa-table"></i> Table from our first tutorial! </div>
+            <div class="title"><i class="fa-solid fa-table"></i> Table from our first tutorial! </div> 
         </div>
 
         <div class="linkholder">
@@ -78,12 +58,11 @@
 
         </div>
     </div>
-  
-</body>
-</html>
+
 
 <script>
     $(document).ready(function() {
         $('#test').DataTable();
     } );
 </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'table/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <form method="post">
+    {% csrf_token %}
+        <div class="pageholder">
+            <div class="titleholder"> 
+                <button class="ourbutton"type="submit"> Submit</button>
+                <div class="title"><i class="fa-solid fa-table"></i> Model multiple choice field! </div> 
+                
+            </div>
+
+            <div class="linkholder">
+           
+               {{form.name|as_crispy_field}}
+               {{form.stadium|as_crispy_field}}
+               {{form.attendance|as_crispy_field}}
+               {{form.characteristics|as_crispy_field}}
+
+            </div>
+        </div>
+    </form>
+</body>
+{% endblock %}
+
