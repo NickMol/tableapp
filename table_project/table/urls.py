@@ -5,6 +5,8 @@ from table import views as view
 
 urlpatterns = [
     path('table1/', view.table1, name='table1'),
+    path('table2/', view.table2, name='table2'),
     path('multiplechoicefield/', view.modelmultiplechoicefield, name='modelmultiplechoicefield'),
     path('', view.home, name='home'),
+    path('jsonresponse/footballclubs', view.footballclubs, name='footballclubs'),
 ]

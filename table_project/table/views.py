@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect
 from .forms import *
 from .models import *
+from django.http import JsonResponse
 
 # Create your views here.
 
 def table1(request):
-    
-    context = {
-                }
+    context = {}
     return render(request, 'table/table1.html',context)
+
+def table2(request):
+    context = {}
+    return render(request, 'table/table2.html',context)
 
 def home(request):
     
@@ -39,3 +42,14 @@ def modelmultiplechoicefield(request):
     context = {'form':form}
     return render(request, 'table/modelmultiplechoicefield.html',context)
 
+def footballclubs(request):
+    result_list = list(TableData.objects.all()\
+                .values('name', 
+                        'attendance',
+                        'stadium',
+                        'created_at',
+                        'edited_at',
+                        'id',
+                       ))
+  
+    return JsonResponse(result_list, safe=False)
