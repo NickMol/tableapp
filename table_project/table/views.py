@@ -13,6 +13,10 @@ def table2(request):
     context = {}
     return render(request, 'table/table2.html',context)
 
+def table3(request):
+    context = {}
+    return render(request, 'table/table3.html',context)
+
 def home(request):
     
     context = {

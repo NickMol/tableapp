@@ -1,0 +1,51 @@
+{% extends 'table/base.html' %}
+{% block content %}
+    <div class="pageholder">
+        <div class="titleholder"> 
+            <a class="ourbutton mr-2 ml-2" href="{% url 'home'%}"> To home</a>
+            <div class="title"><i class="fa-solid fa-table"></i> Table from our third tutorial! </div> 
+        </div>
+
+        <div class="linkholder">
+            <table id="ourtable2" class="beheertable dezetabel">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Stadium</th>
+                        <th>Attendance</th>
+                        <th>Created at</th>
+                        <th>Edited at</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+<script>
+    $(document).ready(function() {
+        $.fn.dataTable.moment('DD-MM-YYYY');
+        var table = $('#ourtable2').DataTable({
+           "ajax": {
+              "processing": true,
+              "url": "{% url 'footballclubs' %}",
+              "dataSrc": "",
+            },
+            "columns": [
+                    { "data": "name"},
+                    { "data": "stadium"},
+                    { "data": "attendance"},
+                    {'data': "created_at",    
+                      "render": function (data) { if (data === null) return ""; 
+                                return window.moment(data).format('DD-MM-YYYY')}
+                    },
+                   
+                    {'data': "edited_at",    
+                      "render": function (data) { if (data === null) return ""; 
+                                return window.moment(data).format('DD-MM-YYYY')}
+                    },
+                ],
+        });
+    });
+</script>
+{% endblock %}
