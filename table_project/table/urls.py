@@ -7,6 +7,7 @@ urlpatterns = [
     path('table1/', view.table1, name='table1'),
     path('table2/', view.table2, name='table2'),
     path('table3/', view.table3, name='table3'),
+    path('table4/', view.table4, name='table4'),
     path('multiplechoicefield/', view.modelmultiplechoicefield, name='modelmultiplechoicefield'),
     path('', view.home, name='home'),
     path('jsonresponse/footballclubs', view.footballclubs, name='footballclubs'),

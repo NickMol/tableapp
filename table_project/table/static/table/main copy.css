@@ -7,41 +7,37 @@
 }
 
 .myTable{
+    margin:0px;
     font-size: 12px;
     min-width: 400px;
-    overflow: hidden;
     border-radius: 7px 7px 0 0;
+    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    margin-left: 1%;
+    margin-left: 1%;
 }
 
 .myTable th {
     background-color: #2D323E;
     color: white;
-    font-weight: bold;
-  }
-
-.myTable td, .myTable th {
-    border: 0.01em solid #e3e2e2;
-  }
-  
-.myTable tr:nth-child(even){background-color: #f9f8f8;}
-
-/* Formats the text*/ 
-#ourtable3_filter,
-#ourtable3_length,
-#ourtable3_info,
-#ourtable3_paginate{
+    text-align: left;
     font-size: 12px;
     font-weight: bold;
-    color: #333;
-}
+    cursor: pointer;
+    padding: 4px 3px;
+  }
+  
+.bottom{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-/* Formats the input fields*/ 
-#ourtable3_filter input,
-#ourtable3_length select{
-    border: 1px solid rgb(3, 154, 204);
-}
-
+.dataTables_length{
+      margin-top: 5px;
+  }
 
 .pageholder{
     display: flex;

@@ -1,0 +1,70 @@
+{% extends 'table/base.html' %}
+{% block content %}
+    <div class="pageholder">
+        <div class="titleholder"> 
+            <a class="ourbutton mr-2 ml-2" href="{% url 'home'%}"> To home</a>
+            <div class="title"><i class="fa-solid fa-table"></i> Table from our fourth tutorial! </div> 
+        </div>
+
+        <div class="linkholder">
+            <table id="ourtable3" class="myTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Stadium</th>
+                        <th>Attendance</th>
+                        <th>Created at</th>
+                        <th>Edited at</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+<script>
+    $(document).ready(function() {
+        $.fn.dataTable.moment('DD-MM-YYYY');
+        var table = $('#ourtable3').DataTable({
+           "ajax": {
+              "processing": true,
+              "url": "{% url 'footballclubs' %}",
+              "dataSrc": "",
+            },
+            "language": {
+                "lengthMenu": "Display _MENU_ rows per page",
+                "zeroRecords": "No records were found, sorry!",
+                "info": "Page _PAGE_ of _PAGES_, _TOTAL_ records" ,
+                "infoEmpty": "No data available",
+                "infoFiltered": "Filtered from _MAX_ records",
+                "paginate": {
+                    "first":      "First",
+                    "last":       "Last",
+                    "next":       "Next",
+                    "previous":   "Previous"
+                },
+                "search":         "Search from records:",
+
+                
+            },
+            "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Show all"]],
+        
+            
+            "columns": [
+                    { "data": "name"},
+                    { "data": "stadium"},
+                    { "data": "attendance"},
+                    {'data': "created_at",    
+                      "render": function (data) { if (data === null) return ""; 
+                                return window.moment(data).format('DD-MM-YYYY')}
+                    },
+                   
+                    {'data': "edited_at",    
+                      "render": function (data) { if (data === null) return ""; 
+                                return window.moment(data).format('DD-MM-YYYY')}
+                    },
+                ],
+        });
+    });
+</script>
+{% endblock %}
